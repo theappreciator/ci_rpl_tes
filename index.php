@@ -1,5 +1,1 @@
-<?php
-
-phpinfo();
-
-?>
+<a href="person.php?first=&last=">person.php</a><br/>
