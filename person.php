@@ -9,19 +9,6 @@
 	$lastName = $_GET['last'];
 	
 	$person = new Person($firstName, $lastName);
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-
 
 ?>
 <html>
