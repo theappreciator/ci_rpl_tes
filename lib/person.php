@@ -5,6 +5,14 @@
 		private $lastName = "b";
 		
 		public function __construct($firstName, $lastName) {
+			
+			if (!isset($firstName) || $firstName == "") {
+				$firstName = "DEFAULT";
+			}
+			if (!isset($lastName) || $lastName == "") {
+				$lastName = "DEFAULT";
+			}
+			
 			$this->setName($firstName, $lastName);
 		}
 		
