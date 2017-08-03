@@ -2,7 +2,7 @@
 
 require 'lib/person.php';
 
-class PersonTest extends PHPUnit_FrameworkTestCase
+class PersonTest extends PHPUnit_Framework_TestCase
 {
 	public $personInstance;
 	
