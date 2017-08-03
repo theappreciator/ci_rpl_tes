@@ -1,6 +1,6 @@
 <?php
 
-require 'lib/person.php'
+require 'lib/person.php';
 
 class PersonTest extends PHPUnit_FrameworkTestCase
 {
