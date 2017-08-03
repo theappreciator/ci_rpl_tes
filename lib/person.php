@@ -1,19 +1,18 @@
 <?php
 
 	class Person {
-		private $firstName = "A";
-		private $lastName = "b";
+		private $firstName = "DEFAULT";
+		private $lastName = "DEFAULT";
+		
+		public function __constrct() {
+			
+		}
 		
 		public function __construct($firstName, $lastName) {
-			
-			if (!isset($firstName) || $firstName == "") {
-				$firstName = "DEFAULT";
+			if (isset($firstName) && $firstName != "" &&
+			    isset($lastName) && $lastName != "") {
+				$this->setName($firstName, $lastName);
 			}
-			if (!isset($lastName) || $lastName == "") {
-				$lastName = "DEFAULT";
-			}
-			
-			$this->setName($firstName, $lastName);
 		}
 		
 		public function getFirstName() {
