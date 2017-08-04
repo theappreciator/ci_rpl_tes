@@ -8,15 +8,7 @@ pipeline {
 				sh "echo \"Path:   \$PATH\""				
                 sh 'phpunit --log-junit results/phpunit/phpunit.xml -c tests/phpunit.xml'
 				
-				publishHTML target: [
-					allowMissing: false, 
-					alwaysLinkToLastBuild: true,
-					keepAll: false, 
-					reportDir: 'reports', 
-					reportFiles: 'index.html', 
-					reportName: 'HTML_Report', 
-					reportTitles: 'report_title'
-				]
+				junit '**/results/phpunit/*.xml'
 			}
         }
     }
