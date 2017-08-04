@@ -11,9 +11,6 @@ pipeline {
         }
     }
 	post {
-		always {
-			
-		}
 		success {
 			publishHTML target: [
 				allowMissing: false,
@@ -23,9 +20,6 @@ pipeline {
 				reportFiles: 'index.html',
 				reportName: 'RCov report'
 			]
-		}
-		failure {
-			
 		}
 	}
 }
