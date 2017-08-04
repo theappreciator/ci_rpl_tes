@@ -10,6 +10,7 @@
 			if ($firstName == null) {
 				$firstName = "DEFAULT";
 			}
+			
 			if ($lastName == null) {
 				$lastName = "DEFAULT";
 			}
