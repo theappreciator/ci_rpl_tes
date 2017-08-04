@@ -9,12 +9,13 @@ pipeline {
                 sh 'phpunit --log-junit results/phpunit/phpunit.xml -c tests/phpunit.xml'
 				
 				publishHTML target: [
-					allowMissing: false,
+					allowMissing: false, 
 					alwaysLinkToLastBuild: false,
-					keepAll: true,
-					reportDir: 'reports',
-					reportFiles: 'index.html',
-					reportName: 'RCov_report'
+					keepAll: true, 
+					reportDir: 'reports', 
+					reportFiles: 'index.html', 
+					reportName: 'HTML Report', 
+					reportTitles: ''
 				]
 			}
         }
