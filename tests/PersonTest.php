@@ -23,6 +23,6 @@ class PersonTest extends PHPUnit_Framework_TestCase
 		
 		$this->personInstance.addChild($child);
 		
-		$this->assertEquals(1, count($this->personInstance->getChildren))
+		$this->assertEquals(1, count($this->personInstance->getChildren));
 	}	
 }
