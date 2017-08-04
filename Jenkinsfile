@@ -10,12 +10,12 @@ pipeline {
 				
 				publishHTML target: [
 					allowMissing: false, 
-					alwaysLinkToLastBuild: false,
-					keepAll: true, 
+					alwaysLinkToLastBuild: true,
+					keepAll: false, 
 					reportDir: 'reports', 
 					reportFiles: 'index.html', 
-					reportName: 'HTML Report', 
-					reportTitles: ''
+					reportName: 'HTML_Report', 
+					reportTitles: 'report_title'
 				]
 			}
         }
