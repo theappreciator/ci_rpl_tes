@@ -4,6 +4,8 @@
 		private $firstName;
 		private $lastName;
 		
+		private $children;
+		
 		public function __construct($firstName=null, $lastName=null) {
 			if ($firstName == null) {
 				$firstName = "DEFAULT";
@@ -13,6 +15,8 @@
 			}
 			
 			$this->setName($firstName, $lastName);
+			
+			$children = [];
 		}
 		
 		public function getFirstName() {
@@ -38,6 +42,14 @@
 		public function setName($firstName, $lastName) {
 			$this->setFirstName($firstName);
 			$this->setLastName($lastName);
+		}
+		
+		public function addChild($child) {
+			$children[] = $child;
+		}
+		
+		public function getChildren() {
+			return $children;
 		}
 	
 	}
