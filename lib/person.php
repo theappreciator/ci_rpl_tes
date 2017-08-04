@@ -45,11 +45,11 @@
 		}
 		
 		public function addChild($child) {
-			$children[] = $child;
+			$this->children[] = $child;
 		}
 		
 		public function getChildren() {
-			return $children;
+			return $this->children;
 		}
 	
 	}
