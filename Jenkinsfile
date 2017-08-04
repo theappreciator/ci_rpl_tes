@@ -8,18 +8,19 @@ pipeline {
 				sh "echo \"Path:   \$PATH\""				
                 sh 'phpunit --log-junit results/phpunit/phpunit.xml -c tests/phpunit.xml'
             }
+			post {
+				success {
+					publishHTML target: [
+						allowMissing: false,
+						alwaysLinkToLastBuild: false,
+						keepAll: true,
+						reportDir: 'coverage',
+						reportFiles: 'index.html',
+						reportName: 'RCov report'
+					]
+				}
+			}
         }
     }
-	post {
-		success {
-			publishHTML target: [
-				allowMissing: false,
-				alwaysLinkToLastBuild: false,
-				keepAll: true,
-				reportDir: 'coverage',
-				reportFiles: 'index.html',
-				reportName: 'RCov report'
-			]
-		}
-	}
+	
 }
