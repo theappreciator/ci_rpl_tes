@@ -2,7 +2,7 @@
 
 require_once 'lib/person.php';
 
-class testpackage.PersonTest extends PHPUnit_Framework_TestCase
+class PersonTest extends PHPUnit_Framework_TestCase
 {
 	public $personInstance;
 	
