@@ -6,8 +6,8 @@
 		 processIsolation="false"
 		 stopOnFailure="false"
 		 syntaxCheck="true">
-	<testsuites>
-		<testsuite name="TestSuite.testpackage">
+	<testsuites name="testsuitesname" classname="testsuitesclassname">
+		<testsuite name="testsuitename" classname="testclassname">
 			<directory>.</directory>
 		</testsuite>
 	</testsuites>
