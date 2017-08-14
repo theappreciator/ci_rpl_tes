@@ -8,9 +8,12 @@ pipeline {
 				sh "echo \"Path:   \$PATH\""				
                 sh 'phpunit --log-junit results/phpunit/phpunit.xml -c tests/phpunit/phpunit.xml'
                 sh 'casperjs test ./tests/casperjs/*.js --no-colors --xunit=results/casperjs/xunit.xml'
-				
-				junit 'results/**/*.xml'
 			}
+            post {
+                always {
+                    junit 'results/**/*.xml'
+                }
+            }
         }
     }
 	
