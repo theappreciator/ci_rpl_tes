@@ -27,6 +27,8 @@ casper.test.begin('Add to cart and checkout', 8, function suite(test) {
     // Click on checkout button, navigate to cart
     casper.then(function() {
         this.click("#modal_checkout_links .checkout");
+        
+        this.waitForUrl("http://www.replacements.com/cart/");
     });
     
     // Verify on cart page
