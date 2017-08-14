@@ -34,7 +34,7 @@ casper.test.begin('Add to cart and checkout', 8, function suite(test) {
     // Verify on cart page
     casper.then(function() {
         //this.echo(this.getCurrentUrl());
-        test.assertUrlMatch("http://www.replacements.com/cart/2", "Show cart page");
+        test.assertUrlMatch("http://www.replacements.com/cart/", "Show cart page");
         //this.fill('form[action="/search"]', {
         //    q: "casperjs"
         //}, true);
