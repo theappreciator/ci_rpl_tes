@@ -11,7 +11,6 @@ pipeline {
 			}
             post {
                 always {
-                    sh 'sed -ie \'s/<testsuites/<testsuites name="testsuitesname" classname="testsuitesclassname"/g\' results/casperjs/xunit.xml'
                     junit 'results/**/*.xml'
                 }
             }
