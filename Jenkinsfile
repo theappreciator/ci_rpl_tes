@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Pre-Build') {
+        stage('Pre-Test') {
             steps {
                 sh "echo \"Server: \$(hostname)\""
 				sh "echo \"User:   \$(whoami)\""
@@ -18,10 +18,10 @@ pipeline {
                 sh 'casperjs test ./tests/casperjs/*.js --no-colors --xunit=results/casperjs/xunit.xml'
 			}
         }
-    }
-    post {
-        always {
-            junit 'results/**/*.xml'
+        stage('Report') {
+            steps {
+                junit 'results/**/*.xml'
+            }
         }
     }
 	
