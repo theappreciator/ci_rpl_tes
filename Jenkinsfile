@@ -11,6 +11,7 @@ pipeline {
 			}
             post {
                 always {
+                    sh 'sed -ie "s/Test Suite/Test Suite\" classname=\"testpackage/g" results/casperjs/xunit.xml'
                     junit 'results/**/*.xml'
                 }
             }
