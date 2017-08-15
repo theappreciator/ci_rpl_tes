@@ -23,7 +23,9 @@ pipeline {
         always {
             junit 'results/**/*.xml'
             
-            slackSend 'Slack Message goes here'
+            slackSend channel: '#general',
+                      color: 'good',
+                      message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
 
         }
     }
