@@ -18,10 +18,10 @@ pipeline {
                 sh 'casperjs test ./tests/casperjs/*.js --no-colors --xunit=results/casperjs/xunit.xml'
 			}
         }
-        stage('Report') {
-            steps {
-                junit 'results/**/*.xml'
-            }
+    }
+    post {
+        always {
+            junit 'results/**/*.xml'
         }
     }
 	
