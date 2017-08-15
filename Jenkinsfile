@@ -23,7 +23,7 @@ pipeline {
         always {
             junit 'results/**/*.xml'
             
-            slackSend color: 'good', message: 'Slack Message'
+            slackSend 'Slack Message goes here'
 
         }
     }
