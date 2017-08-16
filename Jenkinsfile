@@ -20,13 +20,18 @@ pipeline {
         }
     }
     post {
-        always {
-            junit 'results/**/*.xml'
-            
+        success {
             slackSend channel: '#general',
                       color: 'good',
                       message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
-
+        }
+        failure {
+            slackSend channel: '#general',
+                      color: 'danger',
+                      message: "The pipeline ${currentBuild.fullDisplayName} failed."
+        }
+        always {
+            junit 'results/**/*.xml'
         }
     }
 	
